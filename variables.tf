@@ -27,3 +27,9 @@ variable "project_owner" {
   type        = string
   description = "Owner of the project"
 }
+
+variable "frontend-sg-ports" {
+
+  type        = list(any)
+  description = "frontend security group parts"
+}
