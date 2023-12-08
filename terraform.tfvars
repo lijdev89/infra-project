@@ -5,3 +5,5 @@ project_env       = "prod"
 project_owner     = "lijesh"
 region            = "ap-south-1"
 frontend-sg-ports = ["80", "443", "22", "8080"]
+hosted_zone_name  = "jehcom.shop"
+hostname          = "terraform"

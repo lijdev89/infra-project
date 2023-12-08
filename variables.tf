@@ -33,4 +33,12 @@ variable "frontend-sg-ports" {
   type        = list(any)
   description = "frontend security group parts"
 }
+variable "hosted_zone_name" {
+  type        = string
+  description = "domain name"
+}
 
+variable "hostname" {
+  type        = string
+  description = "Hostname"
+}
