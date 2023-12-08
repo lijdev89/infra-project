@@ -55,3 +55,4 @@ resource "aws_instance" "frontend" {
     Name = "${var.project_name}-${var.project_env}-frontend"
   }
 }
+
