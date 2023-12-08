@@ -41,3 +41,17 @@ resource "aws_security_group_rule" "prod_rule" {
 
   security_group_id = aws_security_group.ubereats.id
 }
+
+#------------------------------------------
+#Creating EC2 instance
+#------------------------------------------
+resource "aws_instance" "frontend" {
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
+  key_name               = aws_key_pair.auth_key.key_name
+  user_data              = file("setup.sh")
+  vpc_security_group_ids = [aws_security_group.ubereats.id]
+  tags = {
+    Name = "${var.project_name}-${var.project_env}-frontend"
+  }
+}
